@@ -72,8 +72,10 @@ public class Maquina {
 		
 		if ( cantidadNueva <= limitePermitido) {
 			cantidadActual = cantidadNueva;
+			System.out.println("Recarga Exitosa ✅");
 			return true;
 		}
+		System.out.println("Supera el limite de la capacidad ❌");
 		return false;
 	}
 		
