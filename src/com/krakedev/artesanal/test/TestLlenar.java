@@ -1,10 +1,21 @@
 package com.krakedev.artesanal.test;
 
+import com.krakedev.artesanal.Maquina;
+
 public class TestLlenar {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
+		
+		Maquina honey = new Maquina("Honey","Sabor a miel",0.2,5000);
+		Maquina ipa = new Maquina("Ginger","Sabor a gengibre",0.2);
+		
+		honey.imprimir();
+		honey.llenarMaquina();
+		honey.imprimir();
+		
+		ipa.imprimir();
+		ipa.llenarMaquina();
+		ipa.imprimir();
+		
+	}s
 }
