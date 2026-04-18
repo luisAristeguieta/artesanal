@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import com.krakedev.artesanal.Maquina;
 
-public class TestLlenar {
+public class TestLlenarJUnit {
 
 	@Test
 	public void testLlenarMaquina() {
