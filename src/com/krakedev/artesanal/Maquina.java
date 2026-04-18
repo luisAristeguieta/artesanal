@@ -6,8 +6,9 @@ public class Maquina {
 	public double precioPorMl;
 	public double capacidadMaxima;
 	public double cantidadActual;
+	private String codigo;
 
-	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMaxima) {
+	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMaxima, String codigo) {
 		this.nombreCerveza = nombreCerveza;
 		this.descripcion = descripcion;
 		this.precioPorMl = precioPorMl;
@@ -15,7 +16,7 @@ public class Maquina {
 		this.cantidadActual = 0;
 	}
 
-	public Maquina(String nombreCerveza, String descripcion, double precioPorMl) {
+	public Maquina(String nombreCerveza, String descripcion, double precioPorMl,String codigo) {
 		this.nombreCerveza = nombreCerveza;
 		this.descripcion = descripcion;
 		this.precioPorMl = precioPorMl;
@@ -55,22 +56,27 @@ public class Maquina {
 		return cantidadActual;
 	}
 
+	public String getCodigo() {
+		return codigo;
+	}
+
 	public void imprimir() {
 		String mensaje = "Nombre Cerveza: " + nombreCerveza + " , Descripcion: " + descripcion + " , Precio por Ml: "
-				+ precioPorMl + " , Capacidad Maxima:" + capacidadMaxima + " , Cantidad Actual:" + cantidadActual;
+				+ precioPorMl + " , Capacidad Maxima:" + capacidadMaxima + " , Cantidad Actual:" + cantidadActual
+				+ " , Codigo:" + codigo;
 		System.out.println(mensaje);
 	}
-	
+
 	public void llenarMaquina() {
-		this.cantidadActual = this.capacidadMaxima -100;
+		this.cantidadActual = this.capacidadMaxima - 100;
 	}
-	
+
 	public boolean recargarCerveza(double cantidad) {
-		
+
 		double limitePermitido = capacidadMaxima - 100;
 		double cantidadNueva = cantidadActual + cantidad;
-		
-		if ( cantidadNueva <= limitePermitido) {
+
+		if (cantidadNueva <= limitePermitido) {
 			cantidadActual = cantidadNueva;
 			System.out.println("Recarga Exitosa ✅");
 			return true;
@@ -78,15 +84,16 @@ public class Maquina {
 		System.out.println("Supera el limite de la capacidad ❌");
 		return false;
 	}
-	
-	// Agrega metodo para el calculo del costo de la cerveza en base si existe capacidad sino cero.
+
+	// Agrega metodo para el calculo del costo de la cerveza en base si existe
+	// capacidad sino cero.
 	public double servirCerveza(double cantidad) {
-		
-		if(cantidadActual >= cantidad) {
+
+		if (cantidadActual >= cantidad) {
 			cantidadActual = cantidadActual - cantidad;
 			return cantidad * precioPorMl;
 		}
 		return 0;
 	}
-		
+
 }
