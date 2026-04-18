@@ -78,5 +78,15 @@ public class Maquina {
 		System.out.println("Supera el limite de la capacidad ❌");
 		return false;
 	}
+	
+	// Agrega metodo para el calculo del costo de la cerveza en base si existe capacidad sino cero.
+	public double servirCerveza(double cantidad) {
+		
+		if(cantidadActual >= cantidad) {
+			cantidadActual = cantidadActual - cantidad;
+			return cantidad * precioPorMl;
+		}
+		return 0;
+	}
 		
 }
