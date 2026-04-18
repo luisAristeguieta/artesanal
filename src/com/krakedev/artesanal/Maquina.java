@@ -60,5 +60,9 @@ public class Maquina {
 				+ precioPorMl + " , Capacidad Maxima:" + capacidadMaxima + " , Cantidad Actual:" + cantidadActual;
 		System.out.println(mensaje);
 	}
+	
+	public void llenarMaquina() {
+		this.cantidadActual = this.capacidadMaxima -100;
+	}	
 
 }
