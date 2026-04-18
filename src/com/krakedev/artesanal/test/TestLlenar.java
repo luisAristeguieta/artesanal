@@ -16,6 +16,6 @@ public class TestLlenar {
 		ipa.imprimir();
 		ipa.llenarMaquina();
 		ipa.imprimir();
-		
-	}s
+	}
+
 }

@@ -63,6 +63,18 @@ public class Maquina {
 	
 	public void llenarMaquina() {
 		this.cantidadActual = this.capacidadMaxima -100;
-	}	
-
+	}
+	
+	public boolean recargarCerveza(double cantidad) {
+		
+		double limitePermitido = capacidadMaxima - 100;
+		double cantidadNueva = cantidadActual + cantidad;
+		
+		if ( cantidadNueva <= limitePermitido) {
+			cantidadActual = cantidadNueva;
+			return true;
+		}
+		return false;
+	}
+		
 }
