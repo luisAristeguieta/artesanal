@@ -12,7 +12,7 @@ public class TestRecargarJUnit {
 	@Test
 	public void testRecargaExitosa() {
 		
-		Maquina honey = new Maquina("Honey", "Sabor a miel", 0.2, 5000);
+		Maquina honey = new Maquina("Honey", "Sabor a miel", 0.2, 5000,"H100");
 		
 		boolean Resultado = honey.recargarCerveza(1000);
 		
@@ -24,7 +24,7 @@ public class TestRecargarJUnit {
 	@Test
 	public void testRecargaFallida() {
 		
-		Maquina honey = new Maquina("Honey", "Sabor a miel", 0.2, 5000);
+		Maquina honey = new Maquina("Honey", "Sabor a miel", 0.2, 5000,"H100");
 		
 		boolean Resultado = honey.recargarCerveza(10000);
 		

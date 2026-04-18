@@ -6,7 +6,7 @@ public class TestRecarga {
 
 	public static void main(String[] args) {
 		
-		Maquina honey = new Maquina("Honey","Sabor a miel",0.2,5000);
+		Maquina honey = new Maquina("Honey","Sabor a miel",0.2,5000,"H100");
 		
 		System.out.println("*********** Recarga # 1 Honey 🍺 ***********");
 		honey.recargarCerveza(2000);
