@@ -51,10 +51,6 @@ public class Maquina {
 		return capacidadMaxima;
 	}
 
-	public void setCapacidadMaxima(double capacidadMaxima) {
-		this.capacidadMaxima = capacidadMaxima;
-	}
-
 	public double getCantidadActual() {
 		return cantidadActual;
 	}
