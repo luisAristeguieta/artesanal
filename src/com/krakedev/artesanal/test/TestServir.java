@@ -19,9 +19,14 @@ public class TestServir {
 		double valor = honey.servirCerveza(1000);
 		System.out.println("Valor a pagar: $ " + valor);
 		
-		System.out.println("*********** Sirviendo 2000 ml Honey 🍺 ***********");
-		double valor2 = honey.servirCerveza(2000);
+		System.out.println("*********** Sirviendo 3800 ml Honey 🍺 ***********");
+		double valor2 = honey.servirCerveza(3800);
 		System.out.println("Valor a pagar: $ " + valor2);
+		
+		System.out.println("*********** Sirviendo 100 ml Honey 🍺 ***********");
+		double valor3 = honey.servirCerveza(100);
+		System.out.println("Valor a pagar: $ " + valor3);
+		honey.imprimir();
 	}
 
 }

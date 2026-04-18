@@ -14,7 +14,7 @@ public class TestLlenarJUnit {
 
 		honey.llenarMaquina();
 
-		assertEquals(4900, honey.getCantidadActual(), 0.0001);
+		assertEquals(4800, honey.getCantidadActual(), 0.0001);
 
 	}
 

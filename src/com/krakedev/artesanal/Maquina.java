@@ -3,9 +3,9 @@ package com.krakedev.artesanal;
 public class Maquina {
 	private String nombreCerveza;
 	private String descripcion;
-	public double precioPorMl;
-	public double capacidadMaxima;
-	public double cantidadActual;
+	private double precioPorMl;
+	private double capacidadMaxima;
+	private double cantidadActual;
 	private String codigo;
 
 	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMaxima, String codigo) {
@@ -14,6 +14,7 @@ public class Maquina {
 		this.precioPorMl = precioPorMl;
 		this.capacidadMaxima = capacidadMaxima;
 		this.cantidadActual = 0;
+		this.codigo = codigo;
 	}
 
 	public Maquina(String nombreCerveza, String descripcion, double precioPorMl,String codigo) {
@@ -22,6 +23,7 @@ public class Maquina {
 		this.precioPorMl = precioPorMl;
 		this.capacidadMaxima = 10000;
 		this.cantidadActual = 0;
+		this.codigo = codigo;
 	}
 
 	public String getNombreCerveza() {
@@ -68,12 +70,12 @@ public class Maquina {
 	}
 
 	public void llenarMaquina() {
-		this.cantidadActual = this.capacidadMaxima - 100;
+		this.cantidadActual = this.capacidadMaxima - 200;
 	}
 
 	public boolean recargarCerveza(double cantidad) {
 
-		double limitePermitido = capacidadMaxima - 100;
+		double limitePermitido = capacidadMaxima - 200;
 		double cantidadNueva = cantidadActual + cantidad;
 
 		if (cantidadNueva <= limitePermitido) {

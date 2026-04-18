@@ -24,12 +24,13 @@ public class TestRecargarJUnit {
 	@Test
 	public void testRecargaFallida() {
 		
-		Maquina honey = new Maquina("Honey", "Sabor a miel", 0.2, 5000,"H100");
+		Maquina ginger = new Maquina("Ginger", "Sabor a gengibre", 0.3, 8000,"H100");
 		
-		boolean Resultado = honey.recargarCerveza(10000);
+		ginger.recargarCerveza(7000);
+		boolean Resultado = ginger.recargarCerveza(1000);
 		
 		assertTrue(Resultado);
-		assertEquals(10000, honey.getCantidadActual(), 0.0001);
+		assertEquals(3000, ginger.getCantidadActual(), 0.0001);
 		
 	}
 	
