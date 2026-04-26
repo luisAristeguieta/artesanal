@@ -7,7 +7,7 @@ public class TestAtributos {
 	public static void main(String[] args) {
 		
 		Maquina ipa = new Maquina("Ginger","Sabor a gengibre",0.2,"H100");
-		
+				
 		ipa.setNombreCerveza("Ginger V2");
 		ipa.setDescripcion("Doblemente fuerte en sabor");
 		ipa.setPrecioPorMl(0.3);
@@ -16,6 +16,14 @@ public class TestAtributos {
 		Maquina honey = new Maquina("Honey","Sabor a miel",0.2,5000,"H100");
 		
 		honey.imprimir();
+		
+		System.out.println("Prueba Candela de Elizabeth");
+		Maquina cerveceriaNaciona = new Maquina("Pilsener","Sabor adictivo",0.03,"Pl100");
+		
+		cerveceriaNaciona.imprimir();
+		
+		
+		
 	}
 
 }
