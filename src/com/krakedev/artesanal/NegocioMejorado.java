@@ -19,7 +19,15 @@ public class NegocioMejorado {
 	}
 	
 	public String generarCodigo() {
+		// En la clase maquina hay un atributo codigo pero no estaba con un formato para esto existe este metodo
 		int numeroAleatorio = (int)(Math.random() * 100) + 1;
 		return "M-" + numeroAleatorio;
+	}
+	
+	public boolean agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
+		// Metodo que agrega maquinas a la lista existente adicionando el codigo del metodo anterior
+	    String codigo = generarCodigo();
+	    Maquina nueva = new Maquina(nombreCerveza, descripcion, precioPorMl, codigo);
+	    return maquinas.add(nueva);
 	}
 }
