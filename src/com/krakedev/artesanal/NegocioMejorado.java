@@ -38,4 +38,16 @@ public class NegocioMejorado {
 	        maquina.llenarMaquina();
 	    }
 	}
+	
+	public Maquina recuperarMaquina(String codigo) {
+	    // Metodo que Busca la máquina por codigo y sino null
+	    for (int i = 0; i < maquinas.size(); i++) {
+	        Maquina maquinaEncontrada = maquinas.get(i);
+	        if (maquinaEncontrada.getCodigo().equals(codigo)) {
+	            return maquinaEncontrada;
+	        }
+	    }
+	    return null;
+	}
+	
 }
