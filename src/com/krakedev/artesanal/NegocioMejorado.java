@@ -30,4 +30,12 @@ public class NegocioMejorado {
 	    Maquina nueva = new Maquina(nombreCerveza, descripcion, precioPorMl, codigo);
 	    return maquinas.add(nueva);
 	}
+	
+	public void cargarMaquinas() {
+	    // Recorre todas las maquinas y las llena con el metodo de maquina de llenar
+	    for (int i = 0; i < maquinas.size(); i++) {
+	        Maquina maquina = maquinas.get(i);
+	        maquina.llenarMaquina();
+	    }
+	}
 }
