@@ -1,11 +1,12 @@
 package com.krakedev.artesanal;
 
+import java.util.ArrayList;
+
 public class Cliente {
 	private String nombre;
 	private String cedula;
 	private int codigo;
 	private double totalConsumido;
-	
 	
 	public Cliente(String nombre, String cedula) {
 		this.nombre = nombre;

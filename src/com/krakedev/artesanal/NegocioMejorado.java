@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 public class NegocioMejorado {
 	ArrayList<Maquina> maquinas;
+	private ArrayList<Cliente> clientes;
+	private int ultimoCodigo = 100;
 
 	public NegocioMejorado() {
 		this.maquinas = new ArrayList<Maquina>();
@@ -55,6 +57,14 @@ public class NegocioMejorado {
 	        }
 	    }
 	    return null;
+	}
+	
+	public boolean registrarCliente(String nombre, String cedula) {
+	    // Se agrega un cliente siguienda la logica del metodo anterior
+	    Cliente cliente = new Cliente(nombre, cedula);
+	    cliente.setCodigo(ultimoCodigo);
+	    ultimoCodigo++;
+	    return clientes.add(cliente);
 	}
 	
 }
