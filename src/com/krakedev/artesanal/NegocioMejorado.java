@@ -78,5 +78,18 @@ public class NegocioMejorado {
 	    return null;
 	}
 	
+	public Cliente buscarClientePorCodigo(int codigo) {
+	    // Busca un cliente pasandole ahor el codigo, sino existe null
+	    for (int i = 0; i < clientes.size(); i++) {
+	        Cliente clienteEncontrado = clientes.get(i);
+	        if (clienteEncontrado.getCodigo() == codigo) {
+	            return clienteEncontrado;
+	        }
+	    }
+	    return null;
+	}
+	
+
+	
 	
 }
