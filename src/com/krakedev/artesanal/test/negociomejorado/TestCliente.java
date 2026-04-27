@@ -9,7 +9,9 @@ public class TestCliente {
 		
 		NegocioMejorado negocio = new NegocioMejorado();
 		
-		negocio.registrarCliente("Luis", "17562728211");
+		boolean resultado = negocio.registrarCliente("Luis", "17562728211");
+		
+		System.out.println("Se agrego? " + resultado);
 
 	}
 
