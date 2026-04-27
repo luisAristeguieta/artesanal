@@ -60,11 +60,23 @@ public class NegocioMejorado {
 	}
 	
 	public boolean registrarCliente(String nombre, String cedula) {
-	    // Se agrega un cliente siguienda la logica del metodo anterior
+	    // Se agrega un cliente siguienda la logica del metodo de negocio que va sumando el codigo de cliente en 100
 	    Cliente cliente = new Cliente(nombre, cedula);
 	    cliente.setCodigo(ultimoCodigo);
 	    ultimoCodigo++;
 	    return clientes.add(cliente);
 	}
+	
+	public Cliente buscarClientePorCedula(String cedula) {
+	    // Busca un cliente pasandole la cedula, sino existe null
+	    for (int i = 0; i < clientes.size(); i++) {
+	        Cliente clienteEncontrado = clientes.get(i);
+	        if (clienteEncontrado.getCedula().equals(cedula)) {
+	            return clienteEncontrado;
+	        }
+	    }
+	    return null;
+	}
+	
 	
 }
