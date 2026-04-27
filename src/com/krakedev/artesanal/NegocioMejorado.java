@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 
 public class NegocioMejorado {
-	ArrayList<Maquina> maquinas;
+	private ArrayList<Maquina> maquinas; 
 	private ArrayList<Cliente> clientes = new ArrayList<>();
 	private int ultimoCodigo = 100;
 
@@ -18,6 +18,10 @@ public class NegocioMejorado {
 
 	public void setMaquinas(ArrayList<Maquina> maquinas) {
 		this.maquinas = maquinas;
+	}
+	
+	public ArrayList<Cliente> getClientes() {
+	    return clientes;
 	}
 	
 	public String generarCodigo() {
@@ -89,6 +93,18 @@ public class NegocioMejorado {
 	    return null;
 	}
 	
+	public double consumirCerveza(int codigoCliente, String codigoMaquina, double cantidad) {
+	    // Integracion del negocio con las maquinas por el consumo del cliente, asigna el consumo por codigo del cliente
+	    Maquina maquina = recuperarMaquina(codigoMaquina);
+	    Cliente cliente = buscarClientePorCodigo(codigoCliente);
+
+	    if (maquina == null || cliente == null) {
+	        return 0;
+	    }
+	    // Si existe la maquina y el codigo del cliente procede al calculo:
+	    double valor = maquina.servirCerveza(cantidad);
+	    return valor;
+	}
 
 	
 	
