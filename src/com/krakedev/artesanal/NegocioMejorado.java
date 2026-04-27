@@ -103,7 +103,20 @@ public class NegocioMejorado {
 	    }
 	    // Si existe la maquina y el codigo del cliente procede al calculo:
 	    double valor = maquina.servirCerveza(cantidad);
+	    registrarConsumo(codigoCliente, valor); // Se agrega posterior
 	    return valor;
+	}
+	
+	public void registrarConsumo(int codigoCliente, double valor) {
+		
+	    Cliente cliente = buscarClientePorCodigo(codigoCliente);
+
+	    if (cliente != null) {
+	        // Acumular (NO reemplazar)
+	        cliente.setTotalConsumido(
+	            cliente.getTotalConsumido() + valor
+	        );
+	    }
 	}
 
 	
