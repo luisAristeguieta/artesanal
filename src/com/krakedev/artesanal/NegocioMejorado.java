@@ -27,6 +27,13 @@ public class NegocioMejorado {
 	public boolean agregarMaquina(String nombreCerveza, String descripcion, double precioPorMl) {
 		// Metodo que agrega maquinas a la lista existente adicionando el codigo del metodo anterior
 	    String codigo = generarCodigo();
+	    
+	    // Se modifica para validar el codigo generado no exista en la lista de maquinas invocando al metodo recuperarMaquina
+
+	    if (recuperarMaquina(codigo) != null) {
+	        return false;
+	    }
+	    
 	    Maquina nueva = new Maquina(nombreCerveza, descripcion, precioPorMl, codigo);
 	    return maquinas.add(nueva);
 	}
